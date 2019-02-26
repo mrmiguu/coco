@@ -31,3 +31,18 @@ app.css
   width: 160px;
 }
 ```
+
+## Installation
+
+```sh
+go get github.com/mrmiguu/coco
+```
+
+## Running the example
+
+You should use [go-wasm-cli](https://github.com/mfrachet/go-wasm-cli) to run this example.
+
+```sh
+cd $GOPATH/src/github.com/mrmiguu/coco/example
+go-wasm start
+```
