@@ -1,7 +1,10 @@
 package main
 
-import "strings"
-import "./coco"
+import (
+	"strings"
+
+	"github.com/mrmiguu/coco"
+)
 
 type App struct {
 	Logo Logo
