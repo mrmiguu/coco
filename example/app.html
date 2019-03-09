@@ -1,8 +1,7 @@
-<link href="app.css" rel="stylesheet">
-<link href="logo.css" rel="stylesheet">
-
-<div class="app">
-  <span class="logo">
-    <span class="icon">{{ .Logo.Icon }}</span><span class="name">{{ .Logo.Name }}</span>
-  </span>
+<div class="App">
+  <header class="Name">
+    {{.Name}}
+  </header>
+  
+  {{template "Count"}}
 </div>

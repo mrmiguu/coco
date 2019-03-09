@@ -1,0 +1,11 @@
+<div class="Count">
+  {{template "Up"}}
+
+  <div class="Cocos">
+    {{range $_, $coco := .Cocos}}
+      <div class="Coco">{{$coco}}</div>
+    {{end}}
+  </div>
+
+  {{template "Down"}}
+</div>

@@ -1,0 +1,16 @@
+.Count {
+  background: lightsalmon;
+  border: 10px solid salmon;
+}
+
+.Cocos {
+  background: lightyellow;
+  border: 10px solid yellow;
+}
+
+.Coco {
+  display: inline-block;
+  background: lightgray;
+  cursor: pointer;
+  border: 10px solid gray;
+}

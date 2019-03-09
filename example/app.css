@@ -1,7 +1,3 @@
-.app {
-  height: 100%;
-
-  display: grid;
-  justify-content: center;
-  align-content: center;
+.App {
+  border: 10px solid black;
 }

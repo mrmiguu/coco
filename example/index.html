@@ -2,18 +2,20 @@
 <html>
 
 <head>
-	<title>coco</title>
+	<title>my-app</title>
 	<meta charset="utf-8">
 	<script src="wasm_exec.js"></script>
 	<script>
 		if (!WebAssembly.instantiateStreaming) { // polyfill
 			WebAssembly.instantiateStreaming = async (resp, importObject) => {
-				const source = await (await resp).arrayBuffer()
-				return await WebAssembly.instantiate(source, importObject)
-			}
+				const source = await (await resp).arrayBuffer();
+				return await WebAssembly.instantiate(source, importObject);
+			};
 		}
-		const go = new Go()
-		WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(result => go.run(result.instance))
+		const go = new Go();
+		WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
+			go.run(result.instance);
+		});
 	</script>
 	<link href="styles.css" rel="stylesheet">
 </head>

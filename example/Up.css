@@ -1,0 +1,6 @@
+.Up {
+  display: inline-block;
+  background: lightgreen;
+  cursor: pointer;
+  border: 10px solid green;
+}

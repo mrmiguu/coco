@@ -1,0 +1,6 @@
+.Down {
+  display: inline-block;
+  background: lightblue;
+  cursor: pointer;
+  border: 10px solid blue;
+}
