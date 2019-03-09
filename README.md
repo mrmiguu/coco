@@ -14,20 +14,18 @@ func (a App) OnTestClick() {
 }
 ```
 
-app.html
+App.html
 
 ```html
-<link href="app.css" rel="stylesheet">
-
-<div class="test">
-  {{ .Counter }}
+<div class="Test">
+  {{.Counter}}
 </div>
 ```
 
-app.css
+App.css
 
 ```css
-.test {
+.Test {
   width: 160px;
 }
 ```
