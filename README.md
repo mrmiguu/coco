@@ -1,7 +1,7 @@
 # 🥥 Coco
 Golang WebAssembly Framework
 
-app.go
+App.go
 
 ```go
 type App struct {
