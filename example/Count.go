@@ -1,31 +1,17 @@
 package main
 
-import "github.com/mrmiguu/coco"
+import "strconv"
 
 type Count struct {
+	Globals
 	Up
-	Cocos []string
 	Down
 }
 
 func NewCount() Count {
-	return Count{
-		Cocos: []string{"🥥"},
-	}
+	return Count{}
 }
 
-func (c Count) OnUpClick() {
-	println("clicked Up")
-	c.Cocos = append(c.Cocos, "🥥")
-	coco.Set(c)
-}
-
-func (c Count) OnCocoClick() {
-	println("clicked Coco")
-}
-
-func (c Count) OnDownClick() {
-	println("clicked Down")
-	c.Cocos = c.Cocos[1:]
-	coco.Set(c)
+func (c Count) OnCocosClick() {
+	println("clicked " + strconv.Itoa(len(c.Cocos)) + " cocos.")
 }
