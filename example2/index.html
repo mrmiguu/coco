@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>coco</title>
+  <meta charset="utf-8">
+  <style>body{margin:0}</style>
+  <script src="wasm_exec.js"></script>
+  <script>
+    if (!WebAssembly.instantiateStreaming) { // polyfill
+      WebAssembly.instantiateStreaming = async (resp, importObject) => {
+        const source = await (await resp).arrayBuffer();
+        return await WebAssembly.instantiate(source, importObject);
+      };
+    }
+    const go = new Go();
+    WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
+      go.run(result.instance);
+    });
+  </script>
+</head>
+
+<body></body>
+
+</html>
